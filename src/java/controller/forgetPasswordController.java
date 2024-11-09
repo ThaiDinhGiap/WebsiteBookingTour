@@ -55,8 +55,10 @@ public class forgetPasswordController extends HttpServlet {
             properties.put("mail.smtp.starttls.enable", "true");
 
             // Tài khoản Gmail gửi
-            String username = "giaptdhe186094@fpt.edu.vn";
-            String password = "voqfdcwtvasoucxx";
+//            String username = "giaptdhe186094@fpt.edu.vn";
+//            String password = "voqfdcwtvasoucxx";
+            String username = "tuannahe182193@fpt.edu.vn";
+            String password = "bjcg ajlw kqjq rnzn";
 
             Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
                 @Override
@@ -79,7 +81,7 @@ public class forgetPasswordController extends HttpServlet {
                 message.addHeader("Content-type", "text/HTML; charset=UTF-8");
                 message.setFrom(new InternetAddress(username)); //Email người gửi
                 message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email, false)); //Email người nhận
-                message.setSubject(MimeUtility.encodeText("Password change request", "UTF-8", "B"));
+                message.setSubject(MimeUtility.encodeText("Password Change Request", "UTF-8", "B"));
                 message.setSentDate(new Date());
                 MimeBodyPart mimeBodyPart = new MimeBodyPart();
                 mimeBodyPart.setContent(content, "text/html; charset=UTF-8");

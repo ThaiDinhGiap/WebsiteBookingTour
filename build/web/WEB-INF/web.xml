@@ -62,7 +62,7 @@
     </servlet>
     <servlet>
         <servlet-name>homeAdmin</servlet-name>
-        <servlet-class>controller.homeAdmin</servlet-class>
+        <servlet-class>controllerAdmin.homeAdmin</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>customerController</servlet-name>
@@ -74,19 +74,19 @@
     </servlet>
     <servlet>
         <servlet-name>bookingStaffController</servlet-name>
-        <servlet-class>controller.bookingStaffController</servlet-class>
+        <servlet-class>controllerAdmin.bookingStaffController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>sortBookingController</servlet-name>
-        <servlet-class>controller.sortBookingController</servlet-class>
+        <servlet-class>controllerAdmin.sortBookingController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>destinationStaffController</servlet-name>
-        <servlet-class>controller.destinationStaffController</servlet-class>
+        <servlet-class>controllerAdmin.destinationStaffController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>sortDestinationController</servlet-name>
-        <servlet-class>controller.sortDestinationController</servlet-class>
+        <servlet-class>controllerAdmin.sortDestinationController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>packageStaffController</servlet-name>

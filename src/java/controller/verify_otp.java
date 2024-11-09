@@ -13,6 +13,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import model.User;
 
 /**
  *
@@ -42,6 +43,15 @@ public class verify_otp extends HttpServlet {
         }
 
         if (otp.equals(sessionOtp)) {
+            User user = new User();
+            user.setFullName((String) session.getAttribute("name"));
+            user.setEmail((String) session.getAttribute("email"));
+            user.setPassword((String) session.getAttribute("pass"));
+            user.setPhoneNumber((String) session.getAttribute("phone"));
+            
+            CustomerDAO customerDAO = new CustomerDAO();
+            customerDAO.addCustomer(user.getFullName(), user.getEmail(), user.getPhoneNumber(), user.getPassword());
+            
             session.removeAttribute("otp"); 
             session.removeAttribute("attemptsLeft"); 
             session.invalidate(); 
